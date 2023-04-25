@@ -1,0 +1,32 @@
+<h1>Tabla Cursos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Duración</th>
+      <th>Nivel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of miServicio.cursos">
+      <td>{{curso._id}}</td>
+      <td>{{curso._nombre}}</td>
+      <td>{{curso._duracion}}</td>
+      <td>{{curso._nivel}}</td> <input type="button" value="Modificar" [routerLink]="['/tablaModificar', curso._id]">
+    </tr>
+
+  </tbody>
+</table>
+
+<router-outlet></router-outlet>
+
+
+<input type="button" value="Abrir forulario dar alta curso" [routerLink]="['tablaModificar2']">
+
+<!--<label for="id">id: </label> <input type="number"><br><br>
+<label for="nombre">Nombre Curso: </label> <input type="text"><br><br>
+<label for="duracion">Duración: </label> <input type="number"><br><br>
+<label for="nivel">Nivel: </label> <input type="text"><br><br>
+<input type="button" value="Subir curso" (click)="subirCurso()">-->

@@ -1,0 +1,14 @@
+<h1>Modificar cursos</h1>
+
+<label for="id">Id: </label> <input type="number" [(ngModel)]="curso_propio!._id"><br><br>
+<label for="nombre">Nombre: </label> <input type="nombre" [(ngModel)]="curso_propio!._nombre"><br><br>
+<label for="duracion">Duración: </label> <input type="number" [(ngModel)]="curso_propio!._duracion"><br><br>
+<select name="nivel" id="nivel" [(ngModel)]="curso_propio!._nivel">
+  <option value="iniciacion">Iniciación</option>
+  <option value="Intermedio">Intermedio</option>
+  <option value="avanzado">Avanzado</option>
+</select>
+
+<br><br>
+
+<input type="button" value="Enviar" (click)="updateCurso()">
